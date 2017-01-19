@@ -2,6 +2,7 @@ body {
 	padding: 0;
 	margin: 0;
 }
+
 .fullscr {
 	height: 100vh;
 	width: 100%;
@@ -13,20 +14,38 @@ body {
     margin-right: auto;
     position: absolute;	
 }
+
 #bergen {
 	background-image: url(../img/bergen.png);
 	z-index: 4;
 }
+
 #lucht {
 	background-image: url(../img/luchtbg.jpg);
 }
+
 img {
 	position: absolute;
 	z-index: 3;
 	animation-delay: 2s;
-	height: 300px;
-	margin: auto auto;
+	height: 170px;
+	margin-left: auto;
+	margin-right: auto;
 	left: 0;
 	right: 0;
 	margin-top: 30vh;
+}
+
+@font-face {
+	font-family: intro;
+	src: url(../fonts/intro.otf);
+}
+
+.intro {
+	font-family: intro;
+}
+
+h1 {
+	size: 60px;
+	color: black;
 }
