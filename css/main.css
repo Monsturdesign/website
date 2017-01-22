@@ -1,6 +1,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 }
 
 .fullscr {
@@ -17,28 +18,34 @@ body {
 
 #bergen {
 	background-image: url(../img/bergen.png);
-	z-index: 4;
+	z-index: 2;
 }
 
 #lucht {
 	background-image: url(../img/luchtbg.jpg);
+	z-index: -1;
 }
 
-img {
+.logo {
 	position: absolute;
-	z-index: 3;
-	animation-delay: 2s;
-	height: 170px;
+	height: 130px;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	right: 0;
 	margin-top: 30vh;
+	opacity: 1;
+	z-index: 3;
 }
 
 @font-face {
 	font-family: intro;
 	src: url(../fonts/intro.otf);
+}
+
+@font-face {
+	font-family: icon;
+	src: url(../fonts/Flaticon.ttf);
 }
 
 .intro {
@@ -48,4 +55,105 @@ img {
 h1 {
 	size: 60px;
 	color: black;
+}
+.fadeIn {
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+	animation-duration: 3s;
+	animation-delay: 0s;
+	animation-timing-function: ease;
+}
+.fadeIn2 {
+	animation-name: fadeIn2;
+	-webkit-animation-name: fadeIn2;
+	animation-duration: 4s;
+	animation-timing-function: ease;
+}
+@-webkit-keyframes fadeIn {
+from {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 100vh, 0);
+	transform: translate3d(0, 100vh, 0);
+	z-index: 1;	
+}
+98% {
+	z-index: 1;
+}
+to {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+	z-index: 3;
+	
+}
+}
+
+@keyframes fadeIn {
+from {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 100vh, 0);
+	transform: translate3d(0, 100vh, 0);
+	z-index: 1;	
+}
+98% {
+	z-index: 1;
+}
+
+to {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+	z-index: 3;
+	
+}
+}
+@keyframes fadeIn2 {
+from {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 10vh, 0);
+	transform: translate3d(0, 10vh, 0);
+}
+to {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;	
+}
+}
+
+.more {
+	border-radius: 50%;
+	border: 2px solid #02B9D9;
+	height: 50px;
+	width: 50px;
+	z-index: 4;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	margin-top: 88vh;
+	position: absolute;
+	transition-duration: .5s;
+}
+.more:hover {
+	background-color: #02B9D9;
+} 
+.down {
+	z-index: 5;
+	width: 20px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+h2 {
+	font-family: intro;
+	color: white;
+	font-size: 45px;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: calc(35vh + 130px);
+	left: 0;
+	right: 0;
+	opacity: 1;
+	z-index: 3;
+	letter-spacing: 17px;
 }
